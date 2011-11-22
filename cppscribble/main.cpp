@@ -10,16 +10,20 @@
 #include <string>
 #include <boost/foreach.hpp>
 
+using namespace std;
+
 int main (int argc, const char * argv[])
 {
 
     // insert code here...
-    std::string hello("Hello World");
+    string hello("Hello World");
     
     BOOST_FOREACH(char ch, hello)
     {
-        std::cout << ch;
+        cout << ch;
     }
+    
+    cout << endl;
     return 0;
 }
 
