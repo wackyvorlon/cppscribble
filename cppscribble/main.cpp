@@ -23,6 +23,7 @@ int main (int argc, const char * argv[])
     string hello("Hello World");
     string val;
     vector<double> stuff;
+    vector<double> diffs;
     double dummy;
     
     /*BOOST_FOREACH(char ch, hello)
