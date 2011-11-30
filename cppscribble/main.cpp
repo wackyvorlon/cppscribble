@@ -59,10 +59,6 @@ int main (int argc, const char * argv[])
         
         ostream_iterator<double> pout(cout, ", ");
         
-        //Print out the difference values.
-        /*BOOST_FOREACH(double i, diffs){
-            cout << "Diff: " << i << endl;
-        }*/
         
         copy(stuff.begin(),stuff.end(),pout);
         
