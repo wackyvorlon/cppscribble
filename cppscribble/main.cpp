@@ -13,6 +13,7 @@
 #include <vector>
 #include <numeric>
 #include <algorithm>
+#include <functional>
 
 using namespace std;
 
@@ -44,12 +45,14 @@ int main (int argc, const char * argv[])
         }
         
         cout << "\nAfter reading in data, we have " << stuff.size() << " elements.\n";
-        double sum = accumulate(stuff.begin(), stuff.end(), 0.0);
+        //double sum = accumulate(stuff.begin(), stuff.end(), 0.0);
 /*        BOOST_FOREACH(double i, stuff){
             //    cout << endl << i << endl;
             sum += i;
         }*/
-        cout << sum << endl;
+        
+        adjacent_difference(stuff.begin(), stuff.end(), diffs.begin());
+        //cout << sum << endl;
         
         file.close();
     }
