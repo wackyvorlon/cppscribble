@@ -54,6 +54,11 @@ int main (int argc, const char * argv[])
         adjacent_difference(stuff.begin(), stuff.end(), diffs.begin());
         //cout << sum << endl;
         
+        //Print out the difference values.
+        BOOST_FOREACH(double i, diffs){
+            cout << "Diff: " << i << endl;
+        }
+        
         file.close();
     }
     
