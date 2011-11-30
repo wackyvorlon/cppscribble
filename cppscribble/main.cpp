@@ -14,6 +14,8 @@
 #include <numeric>
 #include <algorithm>
 #include <functional>
+#include <iterator>
+
 
 using namespace std;
 
@@ -51,13 +53,18 @@ int main (int argc, const char * argv[])
             sum += i;
         }*/
         
-        adjacent_difference(stuff.begin(), stuff.end(), diffs.begin());
+        //adjacent_difference(stuff.begin(), stuff.end(), diffs.begin());
+        // This isn't working well, gives an exception.
         //cout << sum << endl;
         
+        ostream_iterator<double> pout(cout, ", ");
+        
         //Print out the difference values.
-        BOOST_FOREACH(double i, diffs){
+        /*BOOST_FOREACH(double i, diffs){
             cout << "Diff: " << i << endl;
-        }
+        }*/
+        
+        copy(stuff.begin(),stuff.end(),pout);
         
         file.close();
     }
