@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string>
 #include <boost/foreach.hpp>
+#include <boost/gil/gil_all.hpp>
 #include <fstream>
 #include <vector>
 #include <numeric>
@@ -36,6 +37,9 @@ int main (int argc, const char * argv[])
     
     ifstream file;
     file.open("/Users/wackyvorlon/data.txt");
+    
+    // Let's pre-allocate what we need.
+    stuff.reserve(6500000);
     
     if (file.is_open()) {
         // The file opened fine.
